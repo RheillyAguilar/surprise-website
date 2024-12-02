@@ -9,6 +9,7 @@ export default function ThirdPage() {
     <>
         <Navigation />
         <Third />
+        <Footer />
     </>
   )
 }

@@ -11,6 +11,8 @@ import ImageNine from '../../assets/2023/2023-ImageNine.jpeg'
 import ImageTen from '../../assets/2023/2023-ImageTen.jpeg'
 import ImageEleven from '../../assets/2023/2023-ImageEleven.jpeg'
 import ImageTwelve from '../../assets/2023/2023-ImageTwelve.jpeg'
+import ImageThirteen from '../../assets/2023/2023-ImageThirteen.jpeg'
+import ImageForteen from '../../assets/2023/2023-ImageForteen.jpeg'
 
 
 
@@ -38,6 +40,8 @@ export default function Third() {
                     <img src={ImageTen} alt=""  />
                     <img src={ImageEleven} alt=""  />
                     <img src={ImageTwelve} alt=""  />
+                    <img src={ImageThirteen} alt=""  />
+                    <img src={ImageForteen} alt=""  />
                 </div>
             </section>
     </>

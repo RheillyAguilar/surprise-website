@@ -12,10 +12,15 @@ import ImageEight from '../../assets/2024/2024-ImageEight.jpg'
 import ImageNine from '../../assets/2024/2024-ImageNine.jpg'
 import ImageTen from '../../assets/2024/2024-ImageTen.jpg'
 import ImageEleven from '../../assets/2024/2024-ImageEleven.jpg'
+import ImageTwelve from '../../assets/2024/2024-ImageTwelve.jpg'
+import ImageThirteen from '../../assets/2024/2024-ImageThirteen.jpg'
+import ImageForteen from '../../assets/2024/2024-ImageForteen.jpg'
+import ImageFifteen from '../../assets/2024/2024-ImageFifteen.jpg'
 
 
 
 export default function Forth() {
+    
     return (
         <section className='p-10'>
             <div className="text-center">
@@ -37,6 +42,10 @@ export default function Forth() {
                 <img src={ImageNine} alt="" />
                 <img src={ImageTen} alt="" />
                 <img src={ImageEleven} alt="" />
+                <img src={ImageTwelve} alt="" />
+                <img src={ImageThirteen} alt="" />
+                <img src={ImageForteen} alt="" />
+                <img src={ImageFifteen} alt="" />
             </div>
         </section>
     )

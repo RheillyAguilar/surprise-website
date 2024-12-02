@@ -189,8 +189,6 @@ body {
     box-shadow: 0 1px 6px var(--shadow-color);
     cursor: pointer;
   }
-
-
   .heartEn:before, 
   .heartEn:after {
     content: "";
@@ -206,6 +204,42 @@ body {
   .heartEn:after {
     right: 7.5px;
   }
+  .flap > .heartEn {
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+  }
+
+
+  .heartEnv {
+    position: absolute;
+    top: 307%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 1px 6px var(--shadow-color);
+    cursor: pointer;
+  }
+
+
+  .heartEnv:before, 
+  .heartEnv:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--heart-color);
+    border-radius: 50%;
+  }
+  .heartEnv:before {
+    top: -7.5px;
+  }
+  .heartEnv:after {
+    right: 7.5px;
+  }
   .flap > .envelope:before {
     transform: rotateX(180deg);
     z-index: 0;
@@ -215,7 +249,7 @@ body {
     transform: scale(1.5);
     transition-delay: 1s;
   }
-  .flap > .heartEn {
+  .flap > .heartEnv {
     transform: rotate(90deg);
     transition-delay: 0.4s;
   }
