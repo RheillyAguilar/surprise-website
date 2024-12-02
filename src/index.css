@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+* FONT COLOR - #003049
+* BACKGROUND COLOR - #f5ebe0
+* BUTTON COLOR - #669bbc
+*/
+:root{
+    --primary: #fff;
+    --bg-envelope-color: #f5edd1;
+    --envelope-tab: #ecdeb8;
+    --envelope-cover: #e6cfa7;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --txt-color: #444;
+    --heart-color: rgb(252, 8, 231);
+  }
+
+* {
+    font-family: "Gruppo", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5ebe0;
+}
+
+
+.sticky {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 128px 20px 128px;
+
+}
+
+.sticky.nav{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: #f5ebe0;
+}
+
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+    padding: 0 12px;
+    overflow: hidden;
+}
+
+.gallery img {
+    margin-bottom: 15px;
+    width: 90%; 
+    border-radius: 5px;
+}
+
+
+/*
+* ENVELOPE DESIGN
+*/
+
+.envelope-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    height: 88vh;
+    display: grid;
+    place-items: center;
+  }
+  .container > .envelope-wrapper {
+    background: var(--bg-envelope-color);
+    box-shadow: 0 0 40px var(--shadow-color);
+  }
+  .envelope-wrapper > .envelope {
+    position: relative;
+    width: 500px;
+    height: 300px;
+  }
+  .envelope-wrapper > .envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    border-top: 180px solid var(--envelope-tab);
+    border-right: 250px solid transparent;
+    border-left: 250px solid transparent;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+  }
+  .envelope-wrapper > .envelope::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 0px;
+    height: 300px;
+    border-top: 150px solid transparent;
+    border-right: 250px solid var(--envelope-cover);
+    border-bottom: 100px solid var(--envelope-cover);
+    border-left: 250px solid var(--envelope-cover);
+  }
+.envelope > .letter {
+    position: absolute;
+    right: 17%;
+    bottom: 0;
+    width: 330px;
+    height: 100%;
+    max-height: 300px; /* Control the height to trigger scrolling */
+    background: var(--primary);
+    text-align: center;
+    transition: all 1s ease-in-out;
+    box-shadow: 0 0 5px var(--shadow-color);
+    padding: 20px 10px 130px 10px;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.envelope > .letter::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers like Chrome and Edge */
+}
+  .envelope > .letter > .text {
+    color: var(--txt-color);
+    text-align: left;
+    font-size: 15px;
+  }
+  .heart {
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 1px 6px var(--shadow-color);
+    cursor: pointer;
+  }
+  .heart:before, 
+  .heart:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--heart-color);
+    border-radius: 50%;
+  }
+  .heart:before {
+    top: -7.5px;
+  }
+  .heart:after {
+    right: 7.5px;
+  }
+  .flap > .envelope:before {
+    transform: rotateX(180deg);
+    z-index: 0;
+  }
+  .flap > .envelope > .letter {
+    bottom: 100px;
+    transform: scale(1.5);
+    transition-delay: 1s;
+  }
+  .flap > .heart {
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+  }
+
+
+  .heartEn {
+    position: absolute;
+    top: 277%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--heart-color);
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 1px 6px var(--shadow-color);
+    cursor: pointer;
+  }
+
+
+  .heartEn:before, 
+  .heartEn:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--heart-color);
+    border-radius: 50%;
+  }
+  .heartEn:before {
+    top: -7.5px;
+  }
+  .heartEn:after {
+    right: 7.5px;
+  }
+  .flap > .envelope:before {
+    transform: rotateX(180deg);
+    z-index: 0;
+  }
+  .flap > .envelope > .letter {
+    bottom: 100px;
+    transform: scale(1.5);
+    transition-delay: 1s;
+  }
+  .flap > .heartEn {
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+  }
