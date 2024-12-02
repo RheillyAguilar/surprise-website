@@ -16,15 +16,24 @@ import ImageTwelve from '../../assets/2024/2024-ImageTwelve.jpg'
 import ImageThirteen from '../../assets/2024/2024-ImageThirteen.jpg'
 import ImageForteen from '../../assets/2024/2024-ImageForteen.jpg'
 import ImageFifteen from '../../assets/2024/2024-ImageFifteen.jpg'
-
+import ForthMessage from './ForthMessage'
+import { useState } from 'react'
 
 
 export default function Forth() {
-    
+      
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleImageClick = () => {
+      setIsVisible(true);
+  };
+
     return (
         <section className='p-10'>
+            {isVisible && <ForthMessage onClose={() => setIsVisible(false)} />}
             <div className="text-center">
                 <h1 className="font-bold text-4xl">Year 2024</h1>
+                <h1> <strong>TAKE NOTE :</strong> Find the 13th Image.</h1>
                 <p className="max-w-3xl mx-auto text-2xl mt-2">
                     Life is the flower for which love is the honey            
                     <span className="font-bold"> — Victor Hugo</span>
@@ -43,7 +52,7 @@ export default function Forth() {
                 <img src={ImageTen} alt="" />
                 <img src={ImageEleven} alt="" />
                 <img src={ImageTwelve} alt="" />
-                <img src={ImageThirteen} alt="" />
+                <img src={ImageThirteen} alt="" onClick={handleImageClick}/>
                 <img src={ImageForteen} alt="" />
                 <img src={ImageFifteen} alt="" />
             </div>

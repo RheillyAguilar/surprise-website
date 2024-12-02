@@ -37,6 +37,7 @@ export default function Navigation() {
                 <Link to="/third">3rd</Link>
                 <Link to='/forth'>4th</Link>
                 <Link to='/envelope'>Envelope</Link>
+                <Link to='/video'>Video</Link>
             </div>
             <div>
                 <button

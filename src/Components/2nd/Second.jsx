@@ -20,15 +20,26 @@ import ImageSeventeen from '../../assets/2022/2022-ImageSeventeen.jpeg'
 import ImageEighteen from '../../assets/2022/2022-ImageEighteen.jpeg'
 import ImageNineteen from '../../assets/2022/2022-ImageNineteen.jpeg'
 import ImageTwenty from '../../assets/2022/2022-ImageTwenty.jpg'
-
+import { useState } from 'react'
+import SecondMessage from './SecondMessage'
 
 
 export default function Second() {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleImageClick = () => {
+      setIsVisible(true);
+  };
+
+
   return (
     <>
          <section className='p-10'>
+         {isVisible && <SecondMessage onClose={() => setIsVisible(false)} />}
                 <div className="text-center">
                     <h1 className="font-bold text-4xl">Year 2022</h1>
+                    <h1> <strong>TAKE NOTE :</strong> Find the 8th Image</h1>
                     <p className="max-w-3xl mx-auto text-2xl mt-2">
                         I am grateful that you were born, that your love is mine, and our two lives are woven and welded together
                         <span className="font-bold"> — Mark Twain</span>
@@ -42,7 +53,7 @@ export default function Second() {
                     <img src={ImageFive} alt=""  />
                     <img src={ImageSix} alt=""  />
                     <img src={ImageSeven} alt=""  />
-                    <img src={ImageEight} alt=""  />
+                    <img src={ImageEight} alt=""  onClick={handleImageClick}/>
                     <img src={ImageNine} alt=""  />
                     <img src={ImageTen} alt=""  />
                     <img src={ImageEleven} alt=""  />
