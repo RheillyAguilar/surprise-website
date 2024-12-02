@@ -10,6 +10,7 @@ import ForthPage from "./Pages/ForthPage";
 import { AudioProvider } from "./Components/Navigation/AudioContext";
 import Auth from "./Components/Authentication/Auth";
 import EnvelopePage from "./Pages/EnvelopePage";
+import VideoPage from "./Pages/VideoPage";
 
 export default function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -24,6 +25,7 @@ export default function App() {
                     <Route path="/third" element={<ThirdPage />} />
                     <Route path="/forth" element={<ForthPage />} />
                     <Route path="/envelope" element={<EnvelopePage />}/>
+                    <Route path="/video" element={<VideoPage />} />
                 </Routes>
             ) : (
                 <Auth onLogin={() => setIsAuthenticated(true)} />
